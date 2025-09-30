@@ -1,0 +1,39 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f7fafc;
+}
+.dark body {
+  background-color: #1a202c;
+}
+.custom-checkbox:checked + label div {
+  background-color: #06d6a0;
+  border-color: #06d6a0;
+}
+.custom-checkbox:checked + label div:after {
+  opacity: 1;
+}
+.checkbox-label div {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.dark .checkbox-label div {
+  border-color: #4a5568;
+}
+.checkbox-label div:after {
+  content: "✓";
+  font-size: 14px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
