@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/dougl/Desktop/TESTE%20SITE.HTML -->
+<html lang="pt-BR" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App: Orçamento de Casamento</title>
+    <script src="./App_ Orçamento de Casamento_files/saved_resource"></script>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./App_ Orçamento de Casamento_files/css2" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .dark body {
+            background-color: #1a202c;
+        }
+        .custom-checkbox:checked + label div {
+            background-color: #06D6A0;
+            border-color: #06D6A0;
+        }
+        .custom-checkbox:checked + label div:after {
+            opacity: 1;
+        }
+        .checkbox-label div {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #cbd5e0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .dark .checkbox-label div {
+            border-color: #4a5568;
+        }
+        .checkbox-label div:after {
+            content: '✓';
+            font-size: 14px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-0{left:0px}.left-6{left:1.5rem}.top-0{top:0px}.top-1\/2{top:50%}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-6{margin-bottom:1.5rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-4{margin-bottom:1rem}.mt-1{margin-top:0.25rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:0.5rem}.h-6{height:1.5rem}.h-full{height:100%}.h-10{height:2.5rem}.w-6{width:1.5rem}.w-72{width:18rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.flex-grow{flex-grow:1}.-translate-x-full{--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-x-4{column-gap:1rem}.gap-y-6{row-gap:1.5rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-none{border-style:none}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.bg-\[\#118AB2\]{--tw-bg-opacity:1;background-color:rgb(17 138 178 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-\[\#06D6A0\]{--tw-bg-opacity:1;background-color:rgb(6 214 160 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-\[\#06D6A0\]{--tw-text-opacity:1;color:rgb(6 214 160 / var(--tw-text-opacity, 1))}.text-\[\#118AB2\]{--tw-text-opacity:1;color:rgb(17 138 178 / var(--tw-text-opacity, 1))}.text-\[\#FF6F61\]{--tw-text-opacity:1;color:rgb(255 111 97 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-\[\#073B4C\]:hover{--tw-bg-opacity:1;background-color:rgb(7 59 76 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.hover\:text-red-600:hover{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:border-blue-300:focus{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.focus\:ring-0:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-8{padding:2rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (prefers-color-scheme: dark){.dark\:border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.dark\:bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-700\/50{background-color:rgb(55 65 81 / 0.5)}.dark\:text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.dark\:text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:placeholder-gray-400::placeholder{--tw-placeholder-opacity:1;color:rgb(156 163 175 / var(--tw-placeholder-opacity, 1))}.dark\:hover\:bg-gray-600:hover{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.dark\:hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.dark\:focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}}</style></head>
+<body class="text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    <div id="sidebar-menu" class="fixed top-0 left-0 h-full w-72 bg-white dark:bg-gray-800 shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col">
+        <div class="flex-grow">
+            <h3 class="text-center font-semibold text-gray-700 dark:text-gray-200 mb-6 text-xl">Personalizar Título</h3>
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <label for="font-family-select" class="font-medium text-gray-500 dark:text-gray-400">Fonte:</label>
+                    <select id="font-family-select" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                        <option>Inter</option>
+                        <option>Montserrat</option>
+                        <option>Roboto Slab</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label for="font-size-slider" class="font-medium text-gray-500 dark:text-gray-400">Tamanho:</label>
+                    <input id="font-size-slider" type="range" min="1.75" max="4" step="0.05" value="2.25" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                </div>
+            </div>
+        </div>
+        <div class="mt-auto">
+            <button id="dark-mode-toggle" class="w-full flex items-center justify-center gap-3 p-3 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                <span id="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></span>
+                <span class="font-medium">Alternar Tema</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="app" class="container mx-auto p-4 md:p-8 max-w-4xl">
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md mb-10 relative">
+            <button id="hamburger-btn" class="absolute top-1/2 left-6 -translate-y-1/2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 z-10">
+                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <header class="text-center w-full">
+                <input type="text" id="wedding-title" class="font-black text-[#118AB2] bg-transparent text-center w-full border-none outline-none focus:ring-0 px-12" value="Meu Orçamento de Casamento" style="font-family: Inter, sans-serif; font-size: 2.25rem; line-height: 1.2;">
+                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 mt-2">Controle seus gastos de forma simples e visual.</p>
+            </header>
+        </div>
+
+        <section id="summary" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-center">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h2 class="text-lg font-bold text-gray-500 dark:text-gray-400">Orçamento Total</h2>
+                <p id="total-budget" class="text-2xl sm:text-3xl font-extrabold text-[#118AB2]">R$&nbsp;0,00</p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h2 class="text-lg font-bold text-gray-500 dark:text-gray-400">Total Pago</h2>
+                <p id="total-paid" class="text-2xl sm:text-3xl font-extrabold text-[#06D6A0]">R$&nbsp;0,00</p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h2 class="text-lg font-bold text-gray-500 dark:text-gray-400">Saldo Restante</h2>
+                <p id="total-remaining" class="text-2xl sm:text-3xl font-extrabold text-[#FF6F61]">R$&nbsp;0,00</p>
+            </div>
+        </section>
+
+        <main id="suppliers-list" class="space-y-6">
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="1">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Espaço &amp; Buffet">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="2">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Decoração e Flores">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="3">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Fotografia &amp; Vídeo">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="4">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Música (DJ/Banda)">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="5">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Trajes (Noiva e Noivo)">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="Convites e Papelaria">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">×</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="1" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">R$&nbsp;0,00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                
+                                <div class="payments-container mt-2 space-y-3 hidden">
+                                    
+                                </div>
+                            </div>
+                        </main>
+        
+        <section class="mt-10 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center">
+            <h2 class="text-xl font-bold text-gray-500 dark:text-gray-400">Valor Total a Pagar (Todos Fornecedores)</h2>
+            <p id="grand-total-remaining" class="text-3xl sm:text-4xl font-extrabold text-[#FF6F61] mt-2">R$&nbsp;0,00</p>
+        </section>
+
+        <div class="mt-8 text-center">
+            <button id="add-supplier-btn" class="bg-[#118AB2] hover:bg-[#073B4C] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                Adicionar Novo Fornecedor
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = {
+                suppliers: [
+                    { id: 1, name: 'Espaço & Buffet', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                    { id: 2, name: 'Decoração e Flores', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                    { id: 3, name: 'Fotografia & Vídeo', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                    { id: 4, name: 'Música (DJ/Banda)', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                    { id: 5, name: 'Trajes (Noiva e Noivo)', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                    { id: 6, name: 'Convites e Papelaria', totalValue: 0, downPayment: 0, installments: 1, payments: [], paymentsVisible: false },
+                ],
+                
+                init() {
+                    this.renderSuppliers();
+                    this.updateSummary();
+                    this.attachEventListeners();
+                    this.setupDarkModeToggle();
+                    this.setupTitleEditor();
+                    this.setupSidebar();
+                },
+
+                formatCurrency(value) {
+                    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+                },
+
+                updateSummary() {
+                    const totalBudget = this.suppliers.reduce((sum, s) => sum + Number(s.totalValue || 0), 0);
+                    const totalPaid = this.suppliers.reduce((sum, s) => {
+                        const paidInstallments = s.payments.filter(p => p.paid).reduce((paymentSum, p) => paymentSum + p.amount, 0);
+                        const downPayment = Number(s.downPayment || 0);
+                        return sum + downPayment + paidInstallments;
+                    }, 0);
+                    const totalRemaining = totalBudget - totalPaid;
+
+                    document.getElementById('total-budget').textContent = this.formatCurrency(totalBudget);
+                    document.getElementById('total-paid').textContent = this.formatCurrency(totalPaid);
+                    document.getElementById('total-remaining').textContent = this.formatCurrency(totalRemaining);
+                    document.getElementById('grand-total-remaining').textContent = this.formatCurrency(totalRemaining);
+                },
+
+                renderSuppliers() {
+                    const container = document.getElementById('suppliers-list');
+                    container.innerHTML = '';
+                    this.suppliers.forEach(supplier => {
+                        const paidInstallments = supplier.payments.filter(p => p.paid).reduce((sum, p) => sum + p.amount, 0);
+                        const remainingBalance = (supplier.totalValue || 0) - (supplier.downPayment || 0) - paidInstallments;
+
+                        const paymentsToggleHTML = supplier.payments.length > 0 ? `
+                            <div class="toggle-payments-btn flex justify-between items-center mt-6 cursor-pointer p-2 bg-gray-100 dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition-colors">
+                                <h4 class="font-semibold text-gray-600 dark:text-gray-300">Parcelas</h4>
+                                <span class="text-gray-600 dark:text-gray-300 font-bold text-xl transition-transform transform ${supplier.paymentsVisible ? 'rotate-180' : ''}">▼</span>
+                            </div>
+                        ` : '';
+
+                        const supplierCard = `
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-shadow hover:shadow-2xl" data-id="${supplier.id}">
+                                <div class="flex justify-between items-center mb-4">
+                                    <input type="text" class="text-xl font-bold text-gray-700 dark:text-gray-200 bg-transparent border-b-2 border-transparent focus:border-blue-300 dark:focus:border-blue-500 outline-none w-full" value="${supplier.name}">
+                                    <button class="delete-supplier-btn text-red-400 hover:text-red-600 font-bold text-2xl">&times;</button>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 items-start">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Valor Total (R$)</label>
+                                        <input type="number" class="total-value-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="25000" value="${supplier.totalValue > 0 ? supplier.totalValue : ''}">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Entrada (R$)</label>
+                                        <input type="number" class="down-payment-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5000" value="${supplier.downPayment > 0 ? supplier.downPayment : ''}">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 dark:text-gray-400">Nº de Parcelas Restantes</label>
+                                        <input type="number" class="installments-input mt-1 block w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="5" value="${supplier.installments > 0 ? supplier.installments : ''}" min="1">
+                                    </div>
+                                    <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg text-center h-full flex flex-col justify-center">
+                                        <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Falta Pagar</label>
+                                        <p class="supplier-remaining-balance text-2xl font-bold text-[#FF6F61]">${this.formatCurrency(remainingBalance)}</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="generate-installments-btn w-full bg-[#06D6A0] hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md h-10">Gerar Parcelas</button>
+                                </div>
+                                ${paymentsToggleHTML}
+                                <div class="payments-container mt-2 space-y-3 ${supplier.paymentsVisible ? '' : 'hidden'}">
+                                    ${this.renderPayments(supplier)}
+                                </div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', supplierCard);
+                    });
+                },
+                
+                renderPayments(supplier) {
+                    if (supplier.payments.length === 0) return '';
+                    return supplier.payments.map((payment, index) => `
+                        <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-700/50 p-3 rounded-lg">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="payment-${supplier.id}-${index}" class="custom-checkbox hidden" data-payment-index="${index}" ${payment.paid ? 'checked' : ''}>
+                                <label for="payment-${supplier.id}-${index}" class="checkbox-label flex items-center cursor-pointer">
+                                    <div></div>
+                                    <span class="ml-3 text-gray-700 dark:text-gray-300">Parcela ${index + 1}</span>
+                                </label>
+                            </div>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">${this.formatCurrency(payment.amount)}</span>
+                        </div>
+                    `).join('');
+                },
+                
+                attachEventListeners() {
+                    const suppliersList = document.getElementById('suppliers-list');
+                    
+                    suppliersList.addEventListener('click', (e) => {
+                        const card = e.target.closest('[data-id]');
+                        if (!card) return;
+                        const supplierId = parseInt(card.dataset.id);
+
+                        if (e.target.classList.contains('generate-installments-btn')) {
+                            this.generateInstallments(supplierId);
+                        }
+                        if (e.target.classList.contains('delete-supplier-btn')) {
+                            this.deleteSupplier(supplierId);
+                        }
+                        if (e.target.classList.contains('custom-checkbox')) {
+                             this.togglePayment(supplierId, parseInt(e.target.dataset.paymentIndex));
+                        }
+                        if (e.target.closest('.toggle-payments-btn')) {
+                            this.togglePaymentsVisibility(supplierId);
+                        }
+                    });
+
+                    suppliersList.addEventListener('change', (e) => {
+                        const card = e.target.closest('[data-id]');
+                        if (!card) return;
+                        const supplierId = parseInt(card.dataset.id);
+                        const supplier = this.suppliers.find(s => s.id === supplierId);
+
+                        if (e.target.classList.contains('total-value-input')) {
+                            supplier.totalValue = parseFloat(e.target.value) || 0;
+                            this.renderSuppliers();
+                        }
+                        if (e.target.classList.contains('down-payment-input')) {
+                            supplier.downPayment = parseFloat(e.target.value) || 0;
+                            this.renderSuppliers();
+                        }
+                        if (e.target.classList.contains('installments-input')) {
+                            supplier.installments = parseInt(e.target.value) || 1;
+                        }
+                         this.updateSummary();
+                    });
+
+                    suppliersList.addEventListener('input', (e) => {
+                        const card = e.target.closest('[data-id]');
+                        if (!card) return;
+                        const supplierId = parseInt(card.dataset.id);
+                        const supplier = this.suppliers.find(s => s.id === supplierId);
+                        if (e.target.type === 'text') {
+                             supplier.name = e.target.value;
+                        }
+                    });
+
+                    document.getElementById('add-supplier-btn').addEventListener('click', () => {
+                        this.addSupplier();
+                    });
+                },
+
+                setupSidebar() {
+                    const hamburgerBtn = document.getElementById('hamburger-btn');
+                    const sidebarMenu = document.getElementById('sidebar-menu');
+                    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+                    const toggleSidebar = () => {
+                        sidebarMenu.classList.toggle('-translate-x-full');
+                        sidebarOverlay.classList.toggle('hidden');
+                    };
+
+                    hamburgerBtn.addEventListener('click', toggleSidebar);
+                    sidebarOverlay.addEventListener('click', toggleSidebar);
+                },
+
+                setupTitleEditor() {
+                    const titleInput = document.getElementById('wedding-title');
+                    const fontFamilySelect = document.getElementById('font-family-select');
+                    const fontSizeSlider = document.getElementById('font-size-slider');
+
+                    const applyTitleStyles = () => {
+                        const fontFamily = fontFamilySelect.value;
+                        const fontSize = fontSizeSlider.value;
+                        titleInput.style.fontFamily = `'${fontFamily}', sans-serif`;
+                        titleInput.style.fontSize = `${fontSize}rem`;
+                        titleInput.style.lineHeight = '1.2';
+                    };
+
+                    fontFamilySelect.addEventListener('change', applyTitleStyles);
+                    fontSizeSlider.addEventListener('input', applyTitleStyles);
+
+                    applyTitleStyles();
+                },
+
+                setupDarkModeToggle() {
+                    const toggleBtn = document.getElementById('dark-mode-toggle');
+                    const iconContainer = document.getElementById('dark-mode-icon');
+                    
+                    const updateIcon = () => {
+                        if (document.documentElement.classList.contains('dark')) {
+                            iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>`; // Sun
+                        } else {
+                            iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>`; // Moon
+                        }
+                    };
+
+                    toggleBtn.addEventListener('click', () => {
+                        document.documentElement.classList.toggle('dark');
+                        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                        updateIcon();
+                    });
+
+                    updateIcon();
+                },
+
+                generateInstallments(supplierId) {
+                    const supplier = this.suppliers.find(s => s.id === supplierId);
+                    const totalValue = supplier.totalValue || 0;
+                    const downPayment = supplier.downPayment || 0;
+                    const installments = supplier.installments || 0;
+
+                    if (!supplier || totalValue <= 0 || installments <= 0) {
+                        console.error('Por favor, insira um valor total e um número de parcelas válidos.');
+                        return;
+                    }
+                     if (downPayment >= totalValue) {
+                        console.error('O valor da entrada não pode ser igual ou maior que o valor total.');
+                        supplier.payments = [];
+                        this.renderSuppliers();
+                        this.updateSummary();
+                        return;
+                    }
+                    
+                    supplier.payments = [];
+                    const remainingBalance = totalValue - downPayment;
+                    const installmentAmount = remainingBalance / installments;
+                    for (let i = 0; i < installments; i++) {
+                        supplier.payments.push({ amount: installmentAmount, paid: false });
+                    }
+                    supplier.paymentsVisible = true;
+                    this.renderSuppliers();
+                    this.updateSummary();
+                },
+                
+                togglePayment(supplierId, paymentIndex) {
+                    const supplier = this.suppliers.find(s => s.id === supplierId);
+                    supplier.payments[paymentIndex].paid = !supplier.payments[paymentIndex].paid;
+                    this.updateSummary();
+                    this.renderSuppliers();
+                },
+
+                togglePaymentsVisibility(supplierId) {
+                    const supplier = this.suppliers.find(s => s.id === supplierId);
+                    if (supplier) {
+                        supplier.paymentsVisible = !supplier.paymentsVisible;
+                        this.renderSuppliers();
+                    }
+                },
+
+                addSupplier() {
+                    const newId = this.suppliers.length > 0 ? Math.max(...this.suppliers.map(s => s.id)) + 1 : 1;
+                    this.suppliers.push({
+                        id: newId,
+                        name: 'Novo Fornecedor (editável)',
+                        totalValue: 0,
+                        downPayment: 0,
+                        installments: 1,
+                        payments: [],
+                        paymentsVisible: false
+                    });
+                    this.renderSuppliers();
+                    this.updateSummary();
+                },
+                
+                deleteSupplier(supplierId) {
+                    this.suppliers = this.suppliers.filter(s => s.id !== supplierId);
+                    this.renderSuppliers();
+                    this.updateSummary();
+                }
+            };
+            
+            app.init();
+        });
+    </script>
+
+
+
+
+</body></html>
